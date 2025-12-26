@@ -1,0 +1,3 @@
+[submodule "vendor/SDG.Pidgeon"]
+	path = vendor/SDG.Pidgeon
+	url = https://github.com/RtlZeroMemory/SDG.Pidgeon

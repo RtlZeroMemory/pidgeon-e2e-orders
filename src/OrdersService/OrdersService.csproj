@@ -1,9 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\vendor\SDG.Pidgeon\src\SDG.Pidgeon\SDG.Pidgeon.csproj" />
+    <ProjectReference Include="..\..\vendor\SDG.Pidgeon\src\SDG.Pidgeon.Engine.Wolverine\SDG.Pidgeon.Engine.Wolverine.csproj" />
+  </ItemGroup>
 
 </Project>

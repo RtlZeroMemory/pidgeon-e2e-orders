@@ -3,12 +3,13 @@ serviceName: orders-service
 handles:
   - messageName: query.orders.getbyid
     mode: request
+    transport: rabbitmq
     destination: orders-queries
     rpc:
       responses:
         - query.orders.getbyid.response
 publishes:
-  - messageName: event.orders.created
+  - messageName: event.orders.created.v1
     mode: publish
     transport: rabbitmq
     destination: orders-events
