@@ -1,0 +1,14 @@
+version: v1alpha1
+serviceName: orders-service
+handles:
+  - messageName: query.orders.getbyid
+    mode: request
+    destination: orders-queries
+    rpc:
+      responses:
+        - query.orders.getbyid.response
+publishes:
+  - messageName: event.orders.created
+    mode: publish
+    transport: rabbitmq
+    destination: orders-events
